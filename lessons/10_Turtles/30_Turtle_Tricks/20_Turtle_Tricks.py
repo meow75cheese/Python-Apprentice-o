@@ -7,6 +7,8 @@ to see how to use the turtle commands.
 
 
 """
+sides = 5
+turn = 360/sides
 
 # These lines are needed in most turtle programs
 import turtle                           # Tell Python we want to work with the turtle
@@ -18,6 +20,9 @@ tina = turtle.Turtle()                  # Create a turtle named tina
 # tina.pencolor()
 
 
-... # Your code here
+for i in range(sides):
+    tina.left(turn)
+    tina.forward(100)
+
 
 turtle.exitonclick()                    # Close the window when we click on it
