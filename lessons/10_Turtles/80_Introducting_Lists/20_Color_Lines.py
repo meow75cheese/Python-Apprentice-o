@@ -35,4 +35,6 @@ def square_2():
         tina.left(90)
         tina.forward(100)
 
+square_1()
+
 turtle.exitonclick()                     # Close the window when we click on it
