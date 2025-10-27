@@ -33,6 +33,30 @@ app = App("Numbers Grid", layout="grid")
 
 # Create a 10x10 grid using nested loops
 # Or you can use a single loop and calculate the row and column
+for i in range(10):
+    for j in range(10):
+        num = i+1
+        ber = j+1
+        number = num*ber
+        hue = 'green'
+        if number%15 == 0:
+            show = '🐍'
+        elif number%5 == 0:
+            show = '🦡'
+        elif number%3 == 0:
+            show = '🍄'
+        else:
+            show = number
+            chars = list(str(number))
+            cc = 0
+            for digit in chars:
+                print(digit)
+                cc = cc+int(digit)
+            if cc%2 == 0:
+                hue = 'blue'
+            else:
+                hue = 'red'
+        Text(app,text=str(show),grid=[i,j], color=hue)
 
 # In the loop, calculate or increment the number
 
