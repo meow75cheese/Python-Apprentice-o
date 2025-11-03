@@ -42,6 +42,33 @@ def ask_integer(prompt):
 
 
 # Pick the random number
+def reset_num():
+    num = 7
+    while num % 7 == 0:
+        num = random.randint(1,100)
+    return num
+
+num = reset_num()
+guess = 0
+
+
+while guess != num:
+    guess = ask_integer('Guess a number 1-100:')
+    
+    if guess % 7 == 0:
+        print('that is a very bad number, starting over')
+        num = reset_num()
+    elif guess == num:
+        print('you guessed correctly!')
+        break
+    elif guess > num:
+        print('your guess is too high')
+    elif guess < num:
+        print('your guess is too low')
+    else:
+        print('error')
+
+
 
 # In your loop:
 
